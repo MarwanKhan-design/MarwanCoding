@@ -1,9 +1,10 @@
-// Hero.jsx
+import img from "../images/my-img.jpg";
+
 export default function Hero() {
   return (
     <div className="bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-500 text-white py-20 text-center px-4">
       <img
-        src="https://avatars.githubusercontent.com/u/142535313?v=4"
+        src={img}
         alt="Marwan Khan"
         className="w-32 h-32 mx-auto rounded-full border-4 border-white mb-4"
       />
