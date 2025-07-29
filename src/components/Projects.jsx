@@ -2,12 +2,12 @@
 const projects = [
   {
     name: "Quotations Web App",
-    link: "https://quotations-production.up.railway.app/",
+    link: "https://quotations-sigma.vercel.app/",
     description: "Quote app using Django & deployed on Railway.",
   },
   {
     name: "Eco Shop",
-    link: "https://eco-full-production.up.railway.app/",
+    link: "https://eco-full-one.vercel.app/",
     description: "E-commerce MERN app with user auth, cart, and checkout.",
   },
 ];
