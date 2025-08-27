@@ -7,8 +7,8 @@ const projects = [
   },
   {
     name: "Eco Shop",
-    link: "https://eco-full-one.vercel.app/",
-    description: "E-commerce MERN app with user auth, cart, and checkout.",
+    link: "https://next-js-eco-full.vercel.app/",
+    description: "E-commerce Project with stripe.",
   },
 ];
 
