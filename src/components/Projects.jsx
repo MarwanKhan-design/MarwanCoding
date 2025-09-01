@@ -1,9 +1,9 @@
 // Projects.jsx
 const projects = [
   {
-    name: "Quotations Web App",
-    link: "https://quotations-production.up.railway.app/",
-    description: "Quote app using Django & deployed on Railway.",
+    name: "Notes App",
+    link: "https://note-app-etoy.vercel.app/",
+    description: "A full stack notes app using React, Node.js, and MongoDB. with google auth and email auth.",
   },
   {
     name: "Eco Shop",
