@@ -7,7 +7,7 @@ export default function About() {
         <p className="text-lg">
           I'm a 19-year-old web developer from Charsadda, Pakistan. I graduated
           from IIUI School and taught myself web development. I love building
-          real-world apps with React, Node.js, and Django.
+          real-world apps with React, Node.js
         </p>
       </div>
     </section>
