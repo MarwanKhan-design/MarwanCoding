@@ -10,7 +10,7 @@ export default function Hero() {
       />
       <h1 className="text-4xl font-extrabold">Marwan Khan</h1>
       <p className="mt-2 text-lg font-light">
-        Self-Taught Web Developer | MERN
+        Website Developer || Ali Khan Digital Academy
       </p>
       <div className="mt-4 space-x-4">
         <a
