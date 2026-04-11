@@ -2,4 +2,10 @@
 
 body {
   @apply bg-black text-white;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.05),
+    transparent 40%
+  ),
+  #000;
 }
