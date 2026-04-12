@@ -9,7 +9,7 @@ const Hero = () => {
 </h1>
 
 <p className="mt-6 text-gray-400 max-w-xl text-lg leading-relaxed">
-  Full-stack developer specializing in React, Node.js, and Django.
+  Full-stack developer specializing in React, Node.js, Next.js.
   I build modern, high-performance applications that deliver real results.
 </p>
 

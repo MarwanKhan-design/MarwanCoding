@@ -34,6 +34,13 @@ const ContactSection = () => {
     >
       LinkedIn
     </a>
+    <a
+    href="https://github.com/MarwanKhan-design/"
+      target="_blank"
+      className="border border-white/10 px-6 py-3 rounded-lg text-gray-300 hover:text-white hover:border-white transition"
+    >
+      Github
+    </a>
 
   </div>
 </section>

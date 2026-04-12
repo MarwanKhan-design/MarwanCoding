@@ -1,16 +1,18 @@
 export const projects = [
-    {
-      title: "Workout Web",
-      description:
-        "A full-stack app to create, manage, and track Workouts efficiently.",
-      tech: ["Next.js", "MongoDB"],
-      link: "https://workout-web-ten.vercel.app/",
-    },
-    {
-      title: "Eco Platform",
-      description:
-        "Built a full-stack platform to promote eco-friendly practices with dynamic content and user interaction",
-      tech: ["Bootstrap", "React", "Stripe"],
-      link: "https://next-js-eco-full.vercel.app/",
-    },
-  ];
+  {
+    title: "Workout Web",
+    description:
+      "Developed a full-stack workout tracking application with dynamic CRUD functionality, enabling users to create, manage, and monitor workouts efficiently using Next.js and MongoDB.",
+    tech: ["Next.js", "MongoDB"],
+    link: "https://workout-web-ten.vercel.app/",
+    image: "/projects/workout-web.png",
+  },
+  {
+    title: "Eco Platform",
+    description:
+      "Built a full-stack eco-platform with interactive UI and integrated Stripe payments, enabling users to explore sustainability-focused content and support eco-friendly initiatives.",
+    tech: ["Bootstrap", "React", "Stripe"],
+    link: "https://next-js-eco-full.vercel.app/",
+    image: "/projects/eco-full.png",
+  },
+];

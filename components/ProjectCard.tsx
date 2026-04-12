@@ -1,14 +1,27 @@
+import Image from "next/image";
+
 type Project = {
   title: string;
   description: string;
   tech: string[];
   link: string;
+  image: string
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group border border-white/10 rounded-xl p-6 bg-white/5 hover:bg-white/10 transition duration-300">
-      
+
+      {/* Image */}
+      <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover group-hover:scale-105 transition duration-300"
+        />
+      </div>
+
       <h3 className="text-xl font-semibold">
         {project.title}
       </h3>
