@@ -15,4 +15,12 @@ export const projects = [
     link: "https://next-js-eco-full.vercel.app/",
     image: "/projects/eco-full.png",
   },
+  {
+    title: "Bakery Platform",
+    description:
+      "A full-stack bakery platform with JWT authentication, admin dashboard, and manual payment verification.",
+    tech: ["Next.js", "MongoDB", "JWT"],
+    link: "https://bakry-pro.vercel.app/",
+    image: "/projects/bakery-dashboard.png"
+  }
 ];
