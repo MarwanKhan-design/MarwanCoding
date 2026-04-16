@@ -5,49 +5,66 @@ type Project = {
   description: string;
   tech: string[];
   link: string;
-  image: string
+  image: string;
+  github: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group border border-white/10 rounded-xl p-6 bg-white/5 hover:bg-white/10 transition duration-300">
-
-      {/* Image */}
-      <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg">
+    <div className="group flex flex-col h-full border border-white/10 rounded-xl p-5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
+      
+      {/* Image Container with Aspect Ratio control */}
+      <div className="relative w-full aspect-video mb-5 overflow-hidden rounded-lg bg-white/5">
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover group-hover:scale-105 transition duration-300"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
 
-      <h3 className="text-xl font-semibold">
-        {project.title}
-      </h3>
+      {/* Content */}
+      <div className="flex flex-col flex-grow">
+        <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+          {project.title}
+        </h3>
 
-      <p className="text-gray-400 mt-3 leading-relaxed">
-        {project.description}
-      </p>
+        <p className="text-sm text-gray-400 mt-2 line-clamp-3 leading-relaxed">
+          {project.description}
+        </p>
 
-      <div className="flex flex-wrap gap-2 mt-4">
-        {project.tech.map((tech, i) => (
-          <span
-            key={i}
-            className="text-xs border border-white/10 px-2 py-1 rounded bg-black/30"
+        {/* Tech Tags - smaller and more subtle */}
+        <div className="flex flex-wrap gap-1.5 mt-4">
+          {project.tech.map((tech, i) => (
+            <span
+              key={i}
+              className="text-[10px] font-medium tracking-wide uppercase border border-white/5 px-2 py-0.5 rounded bg-white/5 text-gray-300"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Links - Side by Side instead of stacked */}
+        <div className="flex gap-4 mt-auto pt-6">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-semibold text-white hover:text-blue-400 transition-colors flex items-center gap-1"
           >
-            {tech}
-          </span>
-        ))}
+            Live Demo <span>→</span>
+          </a>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-semibold text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+          >
+            GitHub <span>↗</span>
+          </a>
+        </div>
       </div>
-
-      <a
-        href={project.link}
-        target="_blank"
-        className="inline-block mt-5 text-sm text-white group-hover:underline"
-      >
-        View Project →
-      </a>
     </div>
   );
 }
