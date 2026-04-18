@@ -19,9 +19,9 @@ export const projects = [
   },
   {
     title: "Bakery Platform",
-    description:
-      "Engineered a production-ready bakery system with JWT-based authentication, role-based admin dashboard, order lifecycle management, and manual payment verification tailored for local payment workflows.",
-    tech: ["Next.js", "MongoDB", "JWT"],
+  description:
+    "Built a full-stack bakery management platform with JWT authentication, admin dashboard, and dynamic product management. Integrated Cloudinary for image uploads, enabling efficient storage and delivery of product and receipt images.",
+  tech: ["Next.js", "MongoDB", "Cloudinary", 'JWT'],
     link: "https://bakry-pro.vercel.app/",
     image: "/projects/bakery-dashboard.png",
     github: "https://github.com/MarwanKhan-design/bakry-pro"
@@ -31,8 +31,8 @@ export const projects = [
 export const featuredProject = {
   title: "Bakery Platform",
   description:
-    "Production-grade bakery platform featuring JWT authentication, role-based admin controls, structured order management, and manual payment verification designed for real-world local payment systems.",
-  tech: ["Next.js", "MongoDB", "JWT"],
+    "Built a full-stack bakery management platform with JWT authentication, admin dashboard, and dynamic product management. Integrated Cloudinary for image uploads, enabling efficient storage and delivery of product and receipt images.",
+  tech: ["Next.js", "MongoDB", "Cloudinary", 'JWT'],
   link: "https://bakry-pro.vercel.app/",
   image: "/projects/bakery-dashboard.png",
   github: "https://github.com/MarwanKhan-design/bakry-pro"
