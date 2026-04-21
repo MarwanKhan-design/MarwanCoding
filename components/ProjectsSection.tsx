@@ -4,15 +4,15 @@ import ProjectCard from './ProjectCard'
 
 const ProjectsSection = () => {
   return (
-<section id="projects" className="py-24">
-  <h2 className="text-3xl font-bold mb-10">Projects</h2>
-
-  <div className="grid md:grid-cols-2 gap-6">
-    {projects.map((project, i) => (
-      <ProjectCard key={i} project={project} />
-    ))}
-  </div>
-</section>
+<section className="bg-[#0f1013] py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

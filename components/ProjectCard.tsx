@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -11,58 +12,54 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group flex flex-col h-full border border-white/10 rounded-xl p-5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
-      
-      {/* Image Container with Aspect Ratio control */}
-      <div className="relative w-full aspect-video mb-5 overflow-hidden rounded-lg bg-white/5">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+    <div className="bg-[#1a1b1e] rounded-2xl p-4 flex flex-col h-full transition-all hover:bg-[#25262b]">
+      {/* Image Container with Colored Frame */}
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6">
+        <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-grow">
-        <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
-          {project.title}
-        </h3>
-
-        <p className="text-sm text-gray-400 mt-2 line-clamp-3 leading-relaxed">
+      <div className="flex flex-col flex-grow px-2">
+        <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
+        <p className="text-gray-400 text-sm line-clamp-3 mb-4">
           {project.description}
         </p>
 
-        {/* Tech Tags - smaller and more subtle */}
-        <div className="flex flex-wrap gap-1.5 mt-4">
-          {project.tech.map((tech, i) => (
-            <span
-              key={i}
-              className="text-[10px] font-medium tracking-wide uppercase border border-white/5 px-2 py-0.5 rounded bg-white/5 text-gray-300"
+        {/* Tech Stack Tags */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tech.map((item) => (
+            <span 
+              key={item} 
+              className="text-[10px] uppercase tracking-wider bg-zinc-800 text-zinc-300 px-2 py-1 rounded"
             >
-              {tech}
+              {item}
             </span>
           ))}
         </div>
 
-        {/* Links - Side by Side instead of stacked */}
-        <div className="flex gap-4 mt-auto pt-6">
-          <a
-            href={project.link}
+        {/* Links */}
+        <div className="mt-auto flex gap-4">
+          <Link 
+            href={project.link} 
+            className="text-white text-sm font-medium hover:underline"
             target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-semibold text-white hover:text-blue-400 transition-colors flex items-center gap-1"
           >
-            Live Demo <span>→</span>
-          </a>
-          <a
-            href={project.github}
+            Live Demo
+          </Link>
+          <Link 
+            href={project.github} 
+            className="text-gray-400 text-sm hover:text-white transition-colors"
             target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-semibold text-gray-400 hover:text-white transition-colors flex items-center gap-1"
           >
-            GitHub <span>↗</span>
-          </a>
+            GitHub
+          </Link>
         </div>
       </div>
     </div>
