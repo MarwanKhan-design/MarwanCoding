@@ -7,7 +7,7 @@ import { featuredProject } from "@/data/projects";
 
 export default function Home() {
   return (
-    <main className="max-w-5xl mx-auto px-6">
+    <main className="max-w-7xl mx-auto px-6">
       <Hero />
       <FeaturedProjectCard project={featuredProject} />
       <ProjectsSection />
