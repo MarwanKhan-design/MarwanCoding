@@ -1,5 +1,6 @@
 import Image from "next/image";
-
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 type Project = {
   title: string;
   description: string;
@@ -9,70 +10,119 @@ type Project = {
   github: string;
 };
 
-export default function FeaturedProjectCard({ project }: { project: Project }) {
+export default function FeaturedProjectCard({
+  project,
+}: {
+  project: Project;
+}) {
   return (
-    <div className="group relative border border-blue-500/30 rounded-2xl p-1 bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:border-blue-500/50 transition duration-500">
-      
-      {/* Subtle Background Glow */}
-      <div className="absolute inset-0 bg-blue-500/5 blur-3xl -z-10 group-hover:bg-blue-500/10 transition duration-500" />
+    <section id="projects" className="relative">
+      {/* Ambient Glow */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="h-96 w-96 rounded-full bg-blue-500/10 blur-[120px]" />
+      </div>
 
-      <div className="flex flex-col md:flex-row gap-8 bg-black/40 backdrop-blur-md p-6 rounded-[calc(1rem-1px)] h-full">
-        
-        {/* Larger, Featured Image Container */}
-        <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden rounded-xl border border-white/5">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover group-hover:scale-105 transition duration-700"
-          />
-        </div>
+      <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] backdrop-blur-xl transition duration-500 hover:border-blue-500/30">
 
-        {/* Content Section */}
-        <div className="flex flex-col justify-center flex-1">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-[10px] uppercase tracking-widest text-blue-400 font-bold bg-blue-400/10 px-2 py-0.5 rounded-full">
-              Featured Project
-            </span>
-          </div>
+        {/* Gradient Border Glow */}
+        <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 transition duration-500 group-hover:opacity-100" />
 
-          <h3 className="text-2xl md:text-3xl font-bold text-white">
-            {project.title}
-          </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+          
+          {/* Image Side */}
+          <div className="relative overflow-hidden border-b border-white/10 lg:border-b-0 lg:border-r">
+            
+            {/* Image Overlay */}
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
-          <p className="text-gray-300 mt-4 leading-relaxed text-lg">
-            {project.description}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-6">
-            {project.tech.map((tech, i) => (
-              <span
-                key={i}
-                className="text-xs border border-blue-500/20 px-3 py-1 rounded-full bg-blue-500/5 text-blue-200"
-              >
-                {tech}
+            {/* Floating Accent */}
+            <div className="absolute left-6 top-6 z-20">
+              <span className="rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300 backdrop-blur-md">
+                Featured Project
               </span>
-            ))}
+            </div>
+
+            <div className="relative h-[320px] md:h-[450px]">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                priority
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Bottom Glass Info */}
+            <div className="absolute bottom-6 left-6 right-6 z-20 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
+              <p className="text-sm text-zinc-300">
+                Full-stack architecture with scalable backend systems and
+                optimized UI performance.
+              </p>
+            </div>
           </div>
 
-          <div className="flex gap-6 mt-8">
-            <a
-              href={project.link}
-              target="_blank"
-              className="text-sm font-medium text-white flex items-center gap-1 hover:text-blue-400 transition-colors"
-            >
-              Live Demo <span className="text-lg">→</span>
-            </a>
-            <a
-              href={project.github}
-              target="_blank"
-              className="text-sm font-medium text-gray-400 flex items-center gap-1 hover:text-white transition-colors"
-            >
-              Source Code <span className="text-lg">↗</span>
-            </a>
+          {/* Content Side */}
+          <div className="relative flex flex-col justify-center p-8 md:p-12">
+            
+            {/* Tiny Accent Line */}
+            <div className="mb-6 h-px w-16 bg-gradient-to-r from-blue-400 to-transparent" />
+
+            <h3 className="max-w-xl text-4xl font-bold leading-tight tracking-[-0.03em] text-white">
+              {project.title}
+            </h3>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+              {project.description}
+            </p>
+
+            {/* Tech Stack */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.tech.map((tech, i) => (
+                <span
+                  key={i}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-zinc-300 transition duration-300 hover:border-blue-400/30 hover:bg-blue-500/10 hover:text-blue-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 flex flex-wrap items-center gap-4">
+              <a
+                href={project.link}
+                target="_blank"
+                className="inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-black transition duration-300 hover:scale-[1.02] hover:bg-zinc-200"
+              >
+                Live Demo
+                <ArrowUpRight size={18} />
+              </a>
+
+              <a
+                href={project.github}
+                target="_blank"
+                className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white/20 hover:bg-white/[0.06]"
+              >
+                Source Code
+                <FaGithub size={18} />
+              </a>
+            </div>
+
+            {/* Bottom Detail */}
+            <div className="mt-12 flex items-center gap-8 border-t border-white/10 pt-6 text-sm text-zinc-500">
+              <div>
+                <span className="text-white">Stack:</span> MERN
+              </div>
+              <div>
+                <span className="text-white">Focus:</span> Scalability
+              </div>
+              <div>
+                <span className="text-white">Type:</span> Production Ready
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

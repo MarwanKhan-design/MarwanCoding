@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply bg-black text-white;
   background: radial-gradient(
