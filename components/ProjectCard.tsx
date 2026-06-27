@@ -12,20 +12,14 @@ type Project = {
   github: string;
 };
 
-export default function ProjectCard({
-  project,
-}: {
-  project: Project;
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-blue-500/30">
-
       {/* Hover Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/0 via-blue-500/[0.03] to-blue-500/[0.08] opacity-0 transition duration-500 group-hover:opacity-100" />
 
       {/* Image */}
       <div className="relative overflow-hidden border-b border-white/10">
-        
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
@@ -34,6 +28,7 @@ export default function ProjectCard({
             src={project.image}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition duration-700 group-hover:scale-105"
           />
         </div>
@@ -48,7 +43,6 @@ export default function ProjectCard({
 
       {/* Content */}
       <div className="relative flex flex-col p-7">
-        
         {/* Accent Line */}
         <div className="mb-5 h-px w-12 bg-gradient-to-r from-blue-400 to-transparent" />
 
@@ -74,7 +68,6 @@ export default function ProjectCard({
 
         {/* Footer */}
         <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
-          
           {/* Links */}
           <div className="flex items-center gap-3">
             <Link

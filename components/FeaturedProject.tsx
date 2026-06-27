@@ -10,11 +10,7 @@ type Project = {
   github: string;
 };
 
-export default function FeaturedProjectCard({
-  project,
-}: {
-  project: Project;
-}) {
+export default function FeaturedProjectCard({ project }: { project: Project }) {
   return (
     <section id="projects" className="relative">
       {/* Ambient Glow */}
@@ -23,15 +19,12 @@ export default function FeaturedProjectCard({
       </div>
 
       <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] backdrop-blur-xl transition duration-500 hover:border-blue-500/30">
-
         {/* Gradient Border Glow */}
         <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 transition duration-500 group-hover:opacity-100" />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
-          
           {/* Image Side */}
           <div className="relative overflow-hidden border-b border-white/10 lg:border-b-0 lg:border-r">
-            
             {/* Image Overlay */}
             <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
@@ -48,6 +41,7 @@ export default function FeaturedProjectCard({
                 alt={project.title}
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition duration-700 group-hover:scale-105"
               />
             </div>
@@ -63,7 +57,6 @@ export default function FeaturedProjectCard({
 
           {/* Content Side */}
           <div className="relative flex flex-col justify-center p-8 md:p-12">
-            
             {/* Tiny Accent Line */}
             <div className="mb-6 h-px w-16 bg-gradient-to-r from-blue-400 to-transparent" />
 
