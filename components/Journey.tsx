@@ -25,7 +25,7 @@ const STEPS: {
   {
     status: "shipped",
     title: "Production-Oriented Projects",
-    text: "Moved from 'it works locally' to 'it works for users'. BarhtaFit is live; the Freelancer CRM is built like a real SaaS — schema, auth, analytics, deployment.",
+    text: "Moved from 'it works locally' to 'it works for users'. BarhtaFit is live, with workout planning, session logging and progress tracking available to real users.",
     stack: ["TypeScript", "PostgreSQL", "Prisma", "Vercel"],
   },
   {
@@ -67,8 +67,7 @@ const STATUS_META: Record<Status, { label: string; cls: string; icon: typeof Che
 
 const GIT_LOG: { hash: string; ref?: string; msg: string; tone?: "head" | "feat" | "learn" }[] = [
   { hash: "9f3a2c1", ref: "HEAD -> main", msg: "ship: barhtafit v2.0 — programs engine", tone: "head" },
-  { hash: "41bd7e2", msg: "feat(crm): invoices + payment tracking", tone: "feat" },
-  { hash: "c08d433", msg: "feat(crm): analytics dashboard", tone: "feat" },
+  // Freelancer CRM commits are intentionally withheld until the product is ready to share.
   { hash: "a8123ff", msg: "learn(ml): linear regression from scratch", tone: "learn" },
   { hash: "7c1ad90", msg: "db: prisma schema — 9 models, full relations" },
   { hash: "02b9f88", msg: "feat(fit): session logging + streaks", tone: "feat" },

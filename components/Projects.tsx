@@ -1,8 +1,8 @@
 import { ArrowUpRight, Globe, Plus } from "lucide-react";
+import Image from "next/image";
 import { GithubIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { BarhtaFitMock } from "@/components/mockups/BarhtaFitMock";
 import { CRMMock } from "@/components/mockups/CRMMock";
 
 function PSR({ items }: { items: [string, string][] }) {
@@ -110,24 +110,37 @@ export function Projects() {
                     <Globe size={15} />
                     Live Demo
                   </a>
-                  <a href="https://github.com/marwankhan" target="_blank" rel="noreferrer" className="btn-ghost">
-                    <GithubIcon size={15} />
-                    View Code
-                  </a>
                 </div>
               </div>
 
-              {/* visual */}
+              {/* Real product screens */}
               <div className="relative flex items-center">
-                <div className="w-full transition-transform duration-700 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.015]">
-                  <BarhtaFitMock />
+                <div className="grid w-full gap-4 transition-transform duration-700 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.015]">
+                  <div className="overflow-hidden rounded-xl border border-line bg-[#0a0d10] shadow-[0_30px_70px_-30px_rgba(0,0,0,0.9)]">
+                    <Image
+                      src="/projects/barhtafit-workouts.png"
+                      alt="BarhtaFit workout library with a personalised workout routine"
+                      width={1920}
+                      height={1080}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-xl border border-line bg-[#0a0d10] shadow-[0_30px_70px_-30px_rgba(0,0,0,0.9)]">
+                    <Image
+                      src="/projects/barhtafit-progress.png"
+                      alt="BarhtaFit training progress analytics dashboard"
+                      width={1920}
+                      height={1482}
+                      className="h-auto w-full"
+                    />
+                  </div>
                 </div>
                 <div
                   className="absolute -left-3 top-6 hidden rounded-lg border border-line bg-panel px-3 py-2 shadow-xl sm:block lg:-left-6"
                   aria-hidden
                 >
-                  <div className="font-mono text-[9px] uppercase tracking-wider text-faint">shipped</div>
-                  <div className="font-display text-sm font-semibold text-live">v2.0 — programs</div>
+                  <div className="font-mono text-[9px] uppercase tracking-wider text-faint">live product</div>
+                  <div className="font-display text-sm font-semibold text-live">workouts + analytics</div>
                 </div>
               </div>
             </div>
@@ -209,7 +222,7 @@ export function Projects() {
                     View Project
                     <ArrowUpRight size={15} />
                   </a>
-                  <a href="https://github.com/marwankhan" target="_blank" rel="noreferrer" className="btn-ghost">
+                  <a href="https://github.com/MarwanKhan-design" target="_blank" rel="noreferrer" className="btn-ghost">
                     <GithubIcon size={15} />
                     View Code
                   </a>

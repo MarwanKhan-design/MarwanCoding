@@ -159,7 +159,7 @@ function CodeWindow() {
       {/* status bar */}
       <div className="flex items-center justify-between border-t border-line px-4 py-2 font-mono text-[10px] text-faint">
         <span className="flex items-center gap-2">
-          <span className="text-live">●</span> TypeScript · Next.js 15
+          <span className="text-live">●</span> TypeScript · Next.js 16
         </span>
         <span className="hidden sm:block">main*</span>
         <span>Ln 21, Col 32</span>
@@ -451,7 +451,8 @@ export function Hero() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="/Marwan-Khan-Full-Stack-Developer-Resume.pdf"
+                  download
                   className="group flex items-center gap-1.5 text-[13px] font-medium text-faint transition-colors hover:text-foreground"
                 >
                   <FileDown size={14} />
@@ -467,7 +468,7 @@ export function Hero() {
             <Reveal delay={500}>
               <div className="mt-10 grid grid-cols-3 gap-4 border-t border-line pt-6">
                 {[
-                  ["02", "products in production"],
+                  ["01", "product in production"],
                   ["20+", "tools & technologies"],
                   ["24 / 7", "learning mode"],
                 ].map(([v, l]) => (

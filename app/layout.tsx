@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Marwan Khan is a full-stack developer and AI/ML builder shipping production-grade web applications with React, Next.js, TypeScript, PostgreSQL, Prisma, and Python. Creator of BarhtaFit and Freelancer CRM.",
+    "Marwan Khan is a full-stack developer and AI/ML builder shipping production-grade web applications with React, Next.js, TypeScript, PostgreSQL, Prisma, and Python. Creator of BarhtaFit.",
 
   keywords: [
     "Marwan Khan",
@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     "Python",
     "Web Developer Portfolio",
     "BarhtaFit",
-    "Freelancer CRM",
     "AI/ML Builder",
   ],
 
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marwan Khan | Full-Stack Developer & AI/ML Builder",
     description:
-      "Portfolio of Marwan Khan — a full-stack developer and AI/ML builder shipping production-grade web apps. Creator of BarhtaFit and Freelancer CRM.",
+      "Portfolio of Marwan Khan — a full-stack developer and AI/ML builder shipping production-grade web apps. Creator of BarhtaFit.",
     url: "https://marwankhan.com",
     siteName: "Marwan Khan",
     type: "website",
